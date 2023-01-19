@@ -11,11 +11,11 @@ export async function postsPOST(request,response){
 
       let post =request.body;
       if(!post.postName||!post.link){
-         response.send("Bad Request").status(400);
+         response.status(400).send("Bad Request");
          return;
       }
          if( await postsDAO.checkPostLink(post.link)){
-            response.send("post link already exist").status(400);
+            response.status(400).send("post link already exist");
             return;
          }
          post.id = crypto.randomUUID();

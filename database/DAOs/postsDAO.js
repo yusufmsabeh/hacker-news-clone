@@ -22,7 +22,5 @@ export async function insertPost(post){
 }
 
 export async function checkPostLink(link){
-    let result =await db.get('SELECT link FROM posts WHERE link=?',link);
-    return result;
-
+return await db.get('SELECT link FROM posts WHERE link=?',link);
 }
