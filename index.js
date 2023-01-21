@@ -2,6 +2,7 @@
 import express from 'express';
 import { openDatabase  } from './database/index.js';
 import * as postsHandler from './endPointHandlers/posts.js';
+import * as usersHandler from "./endPointHandlers/users.js";
 
 
 
@@ -17,14 +18,12 @@ app.use((request,response,next)=>{
     next();
 })
 
-app.get('/posts',(request,response)=>{
+app.get('/posts',
+    postsHandler.postsGET
+);
 
-    postsHandler.postsGET(request,response);
+app.post('/posts',
+    postsHandler.postsPOST
+);
 
- 
-})
-
-
-app.post('/posts',(request,response)=>{
-    postsHandler.postsPOST(request,response);
-})
+app.post('/signup',usersHandler.signUp)
