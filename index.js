@@ -17,14 +17,6 @@ app.use((request,response,next)=>{
     next();
 })
 
-
-app.get('/',(request,response)=>{
-    console.log("responding");
-    response.sendFile('D:/Coding/web_development/expressjs/server/index.html');
-
- 
-})
-
 app.get('/posts',(request,response)=>{
 
     postsHandler.postsGET(request,response);
