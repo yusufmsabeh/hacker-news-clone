@@ -2,7 +2,7 @@ import express from "express";
 import { openDatabase } from "./database/index.js";
 import * as postsHandler from "./endPointHandlers/posts.js";
 import * as usersHandler from "./endPointHandlers/users.js";
-
+import { authorizationMiddleWare } from "./middlewares/authorization.js";
 const app = express();
 app.use(express.json());
 app.listen(3000);
@@ -18,6 +18,6 @@ app.use((request, response, next) => {
 app.get("/posts", postsHandler.postsGET);
 app.post("/signup", usersHandler.signUp);
 app.post("/login", usersHandler.login);
-
+app.use(authorizationMiddleWare);
 // private endpoints
 app.post("/posts", postsHandler.postsPOST);
