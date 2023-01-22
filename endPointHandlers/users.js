@@ -1,8 +1,6 @@
 import * as usersDAO from "../database/DAOs/usersDAO.js";
 import * as crypto from "node:crypto";
 import * as dotenv from "dotenv";
-
-//new
 import jwt from "jsonwebtoken";
 
 dotenv.config();
@@ -36,7 +34,7 @@ export async function signUp(request, response) {
 export async function login(request, response) {
   try {
     let userLogin = request.body;
-    if ((!userLogin.userName, !userLogin.password)) {
+    if (!userLogin.userName || !userLogin.password) {
       response.status(400).send("missing some parameters");
       return;
     }
@@ -46,6 +44,7 @@ export async function login(request, response) {
       return;
     }
 
+    console.log("user data from database  ", user);
     if (user.password != userLogin.password) {
       response.status(400).send("password in not correct");
       return;
