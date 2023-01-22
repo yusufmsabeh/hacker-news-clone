@@ -1,0 +1,9 @@
+DROP TABLE posts;
+
+CREATE TABLE posts(
+    id VARCHAR NOT NULL PRIMARY KEY,
+    userId VARCHAR NOT NULL,
+    postName VARCHAR NOT NULL,
+    link VARCHAR UNIQUE NOT NULL,
+    FOREIGN KEY (userId) REFERENCES users(id)
+)

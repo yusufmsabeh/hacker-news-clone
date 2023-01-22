@@ -10,7 +10,7 @@ export async function postsPOST(request,response){
    try{
 
       let post =request.body;
-      if(!post.postName||!post.link){
+      if(!post.postName||!post.link||!post.userId){
          response.status(400).send("Bad Request");
          return;
       }
@@ -19,6 +19,7 @@ export async function postsPOST(request,response){
             return;
          }
          post.id = crypto.randomUUID();
+         console.log(post);
          await postsDAO.insertPost(post);
          response.sendStatus(200);
       

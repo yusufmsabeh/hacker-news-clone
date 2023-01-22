@@ -13,7 +13,7 @@ export async function getAllPosts(){
 
 export async function insertPost(post){
     try{
-        await  db.run('INSERT INTO posts (id,postName,link) VALUES (?,?,?)',post.id,post.postName,post.link)
+        await  db.run('INSERT INTO posts (id,userId,postName,link) VALUES (?,?,?,?)',post.id,post.userId,post.postName,post.link)
         return true;
     }catch(e){
         console.error(e)
