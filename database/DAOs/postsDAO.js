@@ -16,8 +16,8 @@ export async function insertPost(post){
         await  db.run('INSERT INTO posts (id,userId,postName,link) VALUES (?,?,?,?)',post.id,post.userId,post.postName,post.link)
         return true;
     }catch(e){
-        console.error(e)
-        return false;
+        console.error(e);
+       throw(e);
     }
 }
 

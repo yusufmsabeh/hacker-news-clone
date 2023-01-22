@@ -19,13 +19,16 @@ export async function postsPOST(request,response){
             return;
          }
          post.id = crypto.randomUUID();
-         console.log(post);
          await postsDAO.insertPost(post);
          response.sendStatus(200);
       
    
    }catch(e){
-      console.error(e)
+      console.error("error message posts end point Post ",e.errno);
+      if(e.errno==19){
+         response.status(400).send("something want wrong make sure of userId");
+         return;
+      }
       response.sendStatus(500);
    }
 }

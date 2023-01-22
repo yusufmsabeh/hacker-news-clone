@@ -14,8 +14,8 @@ export async function openDatabase(){
             filename:path.join(__dirname,'database.db'),
             driver:sqlite3.Database
         });
-        
-        
+    // foreign_keys validation
+        db.get("PRAGMA foreign_keys = ON")
     // add migrate folder
         await db.migrate({
             migrationsPath: path.join(__dirname,'migrations')
