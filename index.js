@@ -6,7 +6,7 @@ import * as usersHandler from "./endPointHandlers/users.js";
 const app = express();
 app.use(express.json());
 app.listen(3000);
-let posts = [];
+
 openDatabase();
 
 app.use((request, response, next) => {
@@ -14,8 +14,10 @@ app.use((request, response, next) => {
   next();
 });
 
+//public endpoints
 app.get("/posts", postsHandler.postsGET);
-
-app.post("/posts", postsHandler.postsPOST);
-
 app.post("/signup", usersHandler.signUp);
+app.post("/login", usersHandler.login);
+
+// private endpoints
+app.post("/posts", postsHandler.postsPOST);

@@ -17,5 +17,8 @@ export async function signUp(user) {
 }
 
 export async function checkUserName(userName) {
-  return await db.get("SELECT userName FROM users WHERE userName=?", userName);
+  return await db.get(
+    "SELECT id,firstName,lastName,userName,password FROM users WHERE userName=?",
+    userName
+  );
 }
