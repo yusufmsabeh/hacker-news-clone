@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
     "require": "^2.4.20",
     "sqlite": "^4.1.2",
     "sqlite3": "^5.1.4"
