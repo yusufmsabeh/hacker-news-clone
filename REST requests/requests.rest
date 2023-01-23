@@ -1,0 +1,34 @@
+POST http://localhost:3000/login 
+Content-Type: application/json
+
+{
+    "userName":"MAZODA",
+    "password":"12345678"
+}
+
+############
+
+POST http://localhost:3000/signup 
+Content-Type: application/json
+
+{
+    "firstName":"Oday",
+    "lastName":"Mutluk",
+    "userName":"MAZODA",
+    "password":"12345678"
+}
+
+############
+
+GET http://localhost:3000/posts
+
+############
+
+POST http://localhost:3000/posts
+Content-type: application/json
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwY2QxMTM0My00YWUzLTRlM2YtODFjYS00N2JmMzAyYmM5ZjUiLCJpYXQiOjE2NzQ0NTg2MDF9.t_YqozYyq0wzgNgG6FYAcwNixqGjy2Ha3S0aTQLQQak
+
+{
+    "postName":"elzero web school website",
+    "link":"elzero.org"
+}
