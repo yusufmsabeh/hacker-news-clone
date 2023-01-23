@@ -44,7 +44,6 @@ export async function login(request, response) {
       return;
     }
 
-    console.log("user data from database  ", user);
     if (user.password != userLogin.password) {
       response.status(400).send("password in not correct");
       return;
