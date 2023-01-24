@@ -21,3 +21,6 @@ app.post("/login", usersHandler.login);
 app.use(authorizationMiddleWare);
 // private endpoints
 app.post("/posts", postsHandler.postsPOST);
+app.post("/updateuser", usersHandler.updateUser);
+app.post("/updateusername", usersHandler.updateUserName);
+app.post("/updatepassword", usersHandler.updatePassword);
