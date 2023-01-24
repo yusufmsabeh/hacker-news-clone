@@ -6,6 +6,16 @@ export async function getAllPosts() {
     return result;
   } catch (e) {
     console.error(e);
+    throw e;
+  }
+}
+
+export async function getAllPostsSpecificUser(userId) {
+  try {
+    return await db.all("SELECT * FROM posts WHERE userId=?", userId);
+  } catch (e) {
+    console.error(e);
+    throw e;
   }
 }
 
@@ -26,5 +36,10 @@ export async function insertPost(post) {
 }
 
 export async function checkPostLink(link) {
-  return await db.get("SELECT link FROM posts WHERE link=?", link);
+  try {
+    return await db.get("SELECT link FROM posts WHERE link=?", link);
+  } catch (e) {
+    console.error(e);
+    throw e;
+  }
 }
