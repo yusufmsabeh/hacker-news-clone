@@ -8,6 +8,7 @@ Content-Type: application/json
     "password":"12345678"
 }
 
+
 ########### SIGNUP endpoint ###########
 
 POST http://localhost:3000/signup HTTP/1.1
@@ -68,3 +69,14 @@ Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwY2QxMT
     "confirmPassword":"youmsyoums2",
     "oldPassword":"youmsyoums"
 }
+
+########### DELETE USER endpoint ###########
+
+POST http://localhost:3000/deleteuser HTTP/1.1
+Content-Type: application/json
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmYTU5MTZjOS1hNjEzLTQ1ODUtODMwMC05Mzc4MzA2MzM3MWIiLCJpYXQiOjE2NzQ3OTg1Mzl9.x1LtLVZkqRYyciTpFLSCPRx3uxDb1TiRqG8cPYPqS2k
+
+{
+    "password":"12345678"
+}
+
