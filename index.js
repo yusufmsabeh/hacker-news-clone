@@ -24,3 +24,4 @@ app.post("/posts", postsHandler.postsPOST);
 app.post("/updateuser", usersHandler.updateUser);
 app.post("/updateusername", usersHandler.updateUserName);
 app.post("/updatepassword", usersHandler.updatePassword);
+app.post("/deleteuser", usersHandler.deleteUser);
