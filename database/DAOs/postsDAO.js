@@ -43,3 +43,11 @@ export async function checkPostLink(link) {
     throw e;
   }
 }
+
+export async function deletePostsForUser(userId) {
+  try {
+    await db.run("DELETE FROM posts WHERE userId=?", userId);
+  } catch (e) {
+    throw e;
+  }
+}

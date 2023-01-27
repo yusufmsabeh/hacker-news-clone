@@ -1,8 +1,8 @@
 import * as usersDAO from "../database/DAOs/usersDAO.js";
+import * as postsDAO from "../database/DAOs/postsDAO.js";
 import * as crypto from "node:crypto";
 import * as dotenv from "dotenv";
 import jwt from "jsonwebtoken";
-import { db } from "../database/index.js";
 
 dotenv.config();
 export async function signUp(request, response) {
@@ -135,6 +135,27 @@ export async function updatePassword(request, response) {
     }
     await usersDAO.updatePassword(body.userId, body.newPassword);
     response.sendStatus(200);
+  } catch (e) {
+    console.error(e);
+    response.sendStatus(500);
+  }
+}
+
+export async function deleteUser(request, response) {
+  try {
+    let body = request.body;
+    if (!body.password) {
+      response.status(400).send("Your Password required");
+      return;
+    }
+    let { password } = await usersDAO.getUserById(body.userId);
+    if (body.password != password) {
+      response.status(401).send("Wrong password");
+      return;
+    }
+    await postsDAO.deletePostsForUser(body.userId);
+    await usersDAO.deleteUser(body.userId);
+    response.status(200).send("user has been deleted successfully");
   } catch (e) {
     console.error(e);
     response.sendStatus(500);

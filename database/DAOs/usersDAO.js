@@ -69,3 +69,11 @@ export async function updatePassword(id, password) {
     throw e;
   }
 }
+
+export async function deleteUser(id) {
+  try {
+    await db.run("DELETE FROM users WHERE id=?", id);
+  } catch (e) {
+    throw e;
+  }
+}
