@@ -21,6 +21,7 @@ export async function authorizationMiddleWare(request, response, next) {
     next();
   } catch (e) {
     console.error(e);
-    response.sendStatus(401);
+    if (e.message == "invalid token") response.sendStatus(401);
+    else response.sendStatus(500);
   }
 }
