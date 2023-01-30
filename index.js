@@ -1,8 +1,7 @@
 import express from "express";
 import { openDatabase } from "./database/index.js";
-import * as postsHandler from "./endPointHandlers/posts.js";
-import * as usersHandler from "./endPointHandlers/users.js";
-import { authorizationMiddleWare } from "./middlewares/authorization.js";
+import { router as userRouter } from "./routes/user.js";
+import { router as postRouter } from "./routes/post.js";
 const app = express();
 app.use(express.json());
 app.listen(3000);
@@ -14,14 +13,5 @@ app.use((request, response, next) => {
   next();
 });
 
-//public endpoints
-app.get("/posts", postsHandler.postsGET);
-app.post("/signup", usersHandler.signUp);
-app.post("/login", usersHandler.login);
-app.use(authorizationMiddleWare);
-// private endpoints
-app.post("/posts", postsHandler.postsPOST);
-app.post("/updateuser", usersHandler.updateUser);
-app.post("/updateusername", usersHandler.updateUserName);
-app.post("/updatepassword", usersHandler.updatePassword);
-app.post("/deleteuser", usersHandler.deleteUser);
+app.use(userRouter);
+app.use(postRouter);
