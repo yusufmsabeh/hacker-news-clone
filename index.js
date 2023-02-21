@@ -4,7 +4,7 @@ import { router as userRouter } from "./routes/user.js";
 import { router as postRouter } from "./routes/post.js";
 const app = express();
 app.use(express.json());
-app.listen(3000);
+app.listen(process.env.PORT);
 
 openDatabase();
 
