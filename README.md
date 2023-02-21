@@ -1,3 +1,11 @@
 # hacker-news-clone
 
-<h2>hacker news is a webapp that allows the coders to share any recourses with other coders</h2>
+### how to install
+
+```
+git clone https://github.com/yusufmsabeh/hacker-news-clone.git
+cd hacker-news-clone
+npm i
+npm start
+
+```
