@@ -9,4 +9,4 @@ npm i
 npm start
 ```
 
-> There serve will run on port 3000 you can change it in index.js file app.listen(<yourport>);
+> this serve will run on port 3000 you can change it in index.js file app.listen(\<yourport\>);
