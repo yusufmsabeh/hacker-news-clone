@@ -13,17 +13,19 @@ npm start
 
 # End-points List
 
-    1. Authorization End-points
-        * /login ==> POST
-        * /signup ==> POST
+1. Authorization End-points
 
-    2. User End-points
-        - /updateuser ==> POST
-        - /updateusername ==> POST
-        - /updatepassword ==> POST
-        - /deleteuser ==> POST
+   - /login ==> POST
+   - /signup ==> POST
 
-    3. Posts End-points
-        + /posts ==> GET ==> get list of posts
-            > to get posts for specific user send his id in params
-        + /posts ==> POST ==> Add Post
+2. User End-points
+
+   - /updateuser ==> POST
+   - /updateusername ==> POST
+   - /updatepassword ==> POST
+   - /deleteuser ==> POST
+
+3. Posts End-points
+   - /posts ==> GET ==> get list of posts
+     > to get posts for specific user send his id in params
+   - /posts ==> POST ==> Add Post
