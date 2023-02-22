@@ -13,17 +13,17 @@ npm start
 
 # End-points List
 
-    - Authorization End-points
-        - /login ==> POST
-        - /signup ==> POST
+    * Authorization End-points
+        * /login ==> POST
+        * /signup ==> POST
 
-    - User End-points
-        - /updateuser ==> POST
-        - /updateusername ==> POST
-        - /updatepassword ==> POST
-        - /deleteuser ==> POST
+    * User End-points
+        * /updateuser ==> POST
+        * /updateusername ==> POST
+        * /updatepassword ==> POST
+        * /deleteuser ==> POST
 
-    - Posts End-points
-        - /posts ==> GET ==> get list of posts
+    * Posts End-points
+        * /posts ==> GET ==> get list of posts
             > to get posts for specific user send his id in params
-        - /posts ==> POST ==> Add Post
+        * /posts ==> POST ==> Add Post
