@@ -9,7 +9,11 @@ npm i
 npm start
 ```
 
-> this serve will run on port 3000 you can change it in the .env file
+## .env File
+
+To enable the application to function properly, it is necessary to create a .env file
+ACCESS_TOKEN_SECRET= # random value to use as a access token secret
+PORT= # The port which the application will run on
 
 # End-points List
 
