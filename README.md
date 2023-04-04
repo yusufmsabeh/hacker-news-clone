@@ -1,38 +1,68 @@
-# hacker-news-clone
+## Getting Started
 
-### How to install
+### Installation
 
 ```
 git clone https://github.com/yusufmsabeh/hacker-news-clone.git
-cd hacker-news-clone
+cd shop-expressjs
 npm i
 npm start
 ```
 
-## .env File
+### Configuration
 
-To enable the application to function properly, it is necessary to create a .env file
+To configure the application, you must create a .env file in the root directory of the project. The following variables must be defined in the .env file:
 
 ```
-ACCESS_TOKEN_SECRET= # random value to use as a access token secret
-PORT= # The port which the application will run on
+# random value to use as a access token secret
+ACCESS_TOKEN_SECRET=
+
+# The port which the application will run on
+PORT=
 ```
 
-# End-points List
+### Usage
+
+This API provides the following endpoints:
 
 1. Authorization End-points
 
-   - /login ==> POST
-   - /signup ==> POST
+   ### POST/login
+
+   Login and get access token
+
+   ### POST/signup
+
+   Creates new user account
 
 2. User End-points
 
-   - /updateuser ==> POST
-   - /updateusername ==> POST
-   - /updatepassword ==> POST
-   - /deleteuser ==> POST
+   ### POST/updateuser
+
+   updates public user data
+
+   ### POST/updateusername
+
+   Updates username
+
+   ### POST/updatepassword
+
+   Updates a user password
+
+   ### POST/deleteuser
+
+   Deletes a user account from database
 
 3. Posts End-points
-   - /posts ==> GET ==> get list of posts
-     > to get posts for specific user send his id in params
-   - /posts ==> POST ==> Add Post
+
+   ### POST/posts
+
+   Creates a new posts in the database
+
+   ### GET/posts
+
+   Retrieves a list of posts from the database
+
+   ### GET/posts?:user_id
+
+   Retrieves a list of posts for a specific user from the database
