@@ -53,7 +53,7 @@ This API provides the following endpoints:
 
    Deletes a user account from database
 
-3. Posts End-points
+3. ## Posts End-points
 
    ### POST/posts
 
