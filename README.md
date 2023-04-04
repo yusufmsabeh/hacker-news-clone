@@ -53,16 +53,16 @@ This API provides the following endpoints:
 
    Deletes a user account from database
 
-3. ## Posts End-points
+## 3. Posts End-points
 
-   ### POST/posts
+### POST/posts
 
-   Creates a new posts in the database
+Creates a new posts in the database
 
-   ### GET/posts
+### GET/posts
 
-   Retrieves a list of posts from the database
+Retrieves a list of posts from the database
 
-   ### GET/posts?:user_id
+### GET/posts?:user_id
 
-   Retrieves a list of posts for a specific user from the database
+Retrieves a list of posts for a specific user from the database
