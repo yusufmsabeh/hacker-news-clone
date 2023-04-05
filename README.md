@@ -25,44 +25,44 @@ PORT=
 
 This API provides the following endpoints:
 
-1. Authorization End-points
+## Authorization End-points
 
-   ### POST/login
+### POST/login
 
-   Login and get access token
+Login and get access token
 
-   ### POST/signup
+### POST/signup
 
-   Creates new user account
+Creates new user account
 
-2. User End-points
+## User End-points
 
-   ### POST/updateuser
+### POST/updateuser
 
-   updates public user data
+updates public user data
 
-   ### POST/updateusername
+### POST/updateusername
 
-   Updates username
+Updates username
 
-   ### POST/updatepassword
+### POST/updatepassword
 
-   Updates a user password
+Updates a user password
 
-   ### POST/deleteuser
+### POST/deleteuser
 
-   Deletes a user account from database
+Deletes a user account from database
 
-3. Posts End-points
+# Posts End-points
 
-   ### POST/posts
+### POST/posts
 
-   Creates a new posts in the database
+Creates a new posts in the database
 
-   ### GET/posts
+### GET/posts
 
-   Retrieves a list of posts from the database
+Retrieves a list of posts from the database
 
-   ### GET/posts?:user_id
+### GET/posts?:user_id
 
-   Retrieves a list of posts for a specific user from the database
+Retrieves a list of posts for a specific user from the database
