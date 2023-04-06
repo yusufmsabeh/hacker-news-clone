@@ -66,3 +66,5 @@ Retrieves a list of posts from the database
 ### GET/posts?:user_id
 
 Retrieves a list of posts for a specific user from the database
+
+[API schema](https://api.postman.com/collections/22847465-b5c9b3c6-65f8-4297-a15b-fe3765f0d47a?access_key=PMAT-01GXBMFQT2RNC3Y0R75SFDB0KR)
