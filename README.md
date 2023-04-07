@@ -74,3 +74,7 @@ Retrieves a list of posts for a specific user from the database
 ---
 
 [![API schema](https://www.flaticon.com/free-icon/api_9192360?term=api&page=1&position=54&origin=search&related_id=9192360)](https://www.getpostman.com/collections/22847465-b5c9b3c6-65f8-4297-a15b-fe3765f0d47a)
+
+---
+
+<i class="fa-solid fa-square-up-right" href="https://www.getpostman.com/collections/22847465-b5c9b3c6-65f8-4297-a15b-fe3765f0d47a" >API schema</i>
