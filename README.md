@@ -77,4 +77,4 @@ Retrieves a list of posts for a specific user from the database
 
 ---
 
-<i class="fa-solid fa-square-up-right" href="https://www.getpostman.com/collections/22847465-b5c9b3c6-65f8-4297-a15b-fe3765f0d47a" >API schema</i>
+<i class="fa-solid fa-square-up-right" href="https://www.getpostman.com/collections/22847465-b5c9b3c6-65f8-4297-a15b-fe3765f0d47a" ></i>
