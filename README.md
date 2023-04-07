@@ -67,6 +67,6 @@ Retrieves a list of posts from the database
 
 Retrieves a list of posts for a specific user from the database
 
-[API schema](https://api.postman.com/collections/22847465-b5c9b3c6-65f8-4297-a15b-fe3765f0d47a?access_key=PMAT-01GXBMFQT2RNC3Y0R75SFDB0KR)
+### ---------------------------------------------------------
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/22847465-b5c9b3c6-65f8-4297-a15b-fe3765f0d47a?action=collection%2Ffork&collection-url=entityId%3D22847465-b5c9b3c6-65f8-4297-a15b-fe3765f0d47a%26entityType%3Dcollection%26workspaceId%3D2d4f0c4a-f1d9-4a24-8e26-820600df482a)
